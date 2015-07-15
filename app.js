@@ -7,8 +7,8 @@ var bayes = new Bayeser();
 var app = connect();
 
 var bodyParser = require('body-parser')
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({ type: 'application/*+json' }));
+app.use(bodyParser.urlencoded({ extended: false, limit: '200mb' }));
+app.use(bodyParser.json({ type: 'application/*+json', limit: '200mb' }));
 
 app.use('/test', function(req, res){
   res.setHeader('Content-Type', 'application/json')
