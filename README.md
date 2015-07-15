@@ -4,7 +4,7 @@ A better hamster. Simple and fast spam detection via the [natural](https://githu
 
 ## Installation
 
-* Install node (e.g. via [ndenv](https://github.com/riywo/ndenv) or [nvm](https://github.com/creationix/nvm))
+* Install node version v0.12.7 (e.g. via [n](https://github.com/tj/n) or [nvm](https://github.com/creationix/nvm))
 * Downlow Gerbil and install its dependencies
 
 ```
