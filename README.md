@@ -17,8 +17,9 @@ $ npm install
 
 `$ node app.js`
 
-(more on deploying node to production [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-14-04))
-
+A couple examples of ways you can deploy node to production:
+* via [Passenger](https://github.com/phusion/passenger/wiki/Phusion-Passenger%3A-Node.js-tutorial#prepare_your_app)
+* via [PM2 + nginx](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-14-04)
 
 ## Usage
 
