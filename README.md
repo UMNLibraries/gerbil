@@ -54,7 +54,8 @@ Tip: create a 'bundle exec' equivalent in node with the following bash construct
 `alias npm-exec='PATH=$(npm bin):$PATH`
 
 ## Todo
-* Add app configuration method for port, IP, etc
+* Add app configuration method for port/IP (somewhat irrelevant for Passenger though)
+* Make upload max size configurable
 * Add logging
 * Error reporting for missing required fields (ham, spam, test, corpus)
 * Error reporting for missing corpus (corpus has not been persisted before a test has been run)
