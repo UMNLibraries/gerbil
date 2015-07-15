@@ -44,6 +44,14 @@ curl --data "test=justin beiber recently discoveries invention with science&corp
 [{"label":"ham","value":0.059259259259259255},{"label":"spam","value":0.02222222222222222}]
 ```
 
+## Run the Gerbil test suite
+
+`$ node_modules/.bin/mocha test`
+
+Tip: create a 'bundle exec' equivalent in node with the following bash construct [via](http://stackoverflow.com/a/15157360)
+
+`alias npm-exec='PATH=$(npm bin):$PATH`
+
 ## Todo
 * Add app configuration method for port, IP, etc
 * Add logging
