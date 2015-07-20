@@ -3,7 +3,7 @@ var connect = require('connect')
 var appRoot = require('app-root-path');
 var Bayeser = require(appRoot + '/lib/bayeser.js');
 var bayes = new Bayeser();
-var Dater = require(appRoot + '/lib/dater.js');
+var Dater = require(appRoot + '/lib/dater/dater.js');
 var dater = new Dater();
 
 var app = connect();
@@ -27,10 +27,16 @@ app.use('/spam/train', function(req, res){
   res.end(JSON.stringify({"status": "" + path.basename(filepath) + " (" + req.body.corpus + ") has been trained. Good gerbil."}));
 })
 
-app.use('/date/parse', function(req, res){
+app.use('/date/parsed', function(req, res){
   res.setHeader('Content-Type', 'application/json')
   date = new Dater(req.body.date_text);
   res.end(JSON.stringify(date.parsed[0]));
+})
+
+app.use('/date/start_year', function(req, res){
+  res.setHeader('Content-Type', 'application/json')
+  date = new Dater(req.body.date_text);
+  res.end(JSON.stringify(date.start_year()));
 })
 
 var server = app.listen(8000, function () {
