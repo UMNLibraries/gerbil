@@ -29,8 +29,8 @@ app.use('/spam/train', function(req, res){
 
 app.use('/date/parse', function(req, res){
   res.setHeader('Content-Type', 'application/json')
-  date = dater.parse(req.body.date_text);
-  res.end({"date": JSON.stringify(date)});
+  date = new Dater(req.body.date_text);
+  res.end(JSON.stringify(date.parsed[0]));
 })
 
 var server = app.listen(8000, function () {
