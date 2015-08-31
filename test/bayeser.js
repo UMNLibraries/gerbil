@@ -22,7 +22,7 @@ describe('Bayeser', function() {
   it('recognizes spam', function (done) {
     var test = 'ThAnKyOu SO MUCH Justin Bieber?--XoXo--BLT :D BLOOPERS! african';
     bayes.getClassifications(test, corpus, function(result) {
-      assert.deepEqual(result, [{"label":"spam","value":0.3333333333333333},{"label":"ham","value":0.16666666666666666}]);
+      assert.deepEqual(result, {"classifications": [{"label":"spam","value":0.3333333333333333},{"label":"ham","value":0.16666666666666666}], "ham_or_spam":"spam"});
       done();
     });
   });
@@ -30,7 +30,7 @@ describe('Bayeser', function() {
   it('recognizes ham', function (done) {
     var test = 'ThAnKyOu SO MUCH Justin Bieber?--XoXo--BLT :D BLOOPERS! african american civil rights';
     bayes.getClassifications(test, corpus, function(result) {
-      assert.deepEqual(result, [{"label":"ham","value":0.16666666666666666},{"label":"spam","value":0.041666666666666664}]);
+      assert.deepEqual(result, {"classifications": [{"label":"ham","value":0.16666666666666666},{"label":"spam","value":0.041666666666666664}], "ham_or_spam":"ham"});
       done();
     });
   });
